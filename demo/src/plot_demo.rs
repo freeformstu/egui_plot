@@ -53,7 +53,7 @@ impl PlotDemo {
             ui.collapsing("Instructions", |ui| {
                 ui.label("Pan by dragging, or scroll (+ shift = horizontal).");
                 ui.label("Box zooming: Right click to zoom in and zoom out using a selection.");
-                if cfg!(target_arch = "wasm32") {
+                if cfg!(target_family = "wasm") {
                     ui.label("Zoom with ctrl / ⌘ + pointer wheel, or with pinch gesture.");
                 } else if cfg!(target_os = "macos") {
                     ui.label("Zoom with ctrl / ⌘ + scroll.");
